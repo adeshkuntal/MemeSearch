@@ -10,7 +10,6 @@ const App = () => {
     fetch("https://api.imgflip.com/get_memes")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.success) {
           setMemes(data.data.memes);
           setFiltered(data.data.memes);
